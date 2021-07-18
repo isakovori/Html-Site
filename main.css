@@ -1,0 +1,247 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body { 
+  margin:0;
+  padding:0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: Century Gothic;
+}
+
+h1 {
+   font-size: 250%;
+}
+
+p {
+  font-size: 140%;
+  line-height: 150%;
+  color: #333;
+}
+
+#titlemain {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-shadow: -5px 5px 5px #000;
+}
+
+#titlesub {
+  position: absolute;
+  top: 65%;
+  left: 20;
+  right: 20;
+  color: #fff;
+  text-shadow: -5px 5px 5px #000;
+  font-size: 120%;
+}
+
+@media screen and (max-width: 540px){
+    #titlesub {
+		top: 60%;
+    }
+}
+
+.slide {
+  position: relative;
+  padding: 25vh 10%;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+	transform-style: inherit;
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  width: 320px;
+}
+
+.slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, .7);
+}
+
+.title {
+  width: 50%;
+  padding: 5%;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+.slide:nth-child(2) .title {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.slide:nth-child(3) .title {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.slide:nth-child(5) .title {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.slide, .slide:before {
+  background: 50% 50% / cover;  
+}
+
+.header {
+  text-align: center;
+  font-size: 175%;
+  color: #fff;
+  text-shadow: 0 2px 2px #000;
+}
+
+@media screen and (max-width: 540px){
+    .header {
+		font-size: 100%;
+    }
+}
+
+ul {
+	margin-top: -13%;
+	position: relative;
+	list-style-type: none;
+	
+}
+
+@media screen and (max-width: 540px){
+    ul {
+		margin-top: -30%;
+    }
+}
+
+ul li {
+	display: inline-block;
+}
+
+@media screen and (max-width: 481px){
+    ul li {
+        margin: 1.25% .5% 1.25% .5%;
+        border-left: 0;
+        padding: 1%;
+    }
+}
+
+ul li a {
+	text-decoration: none;
+    color: #fff;
+	padding: 5px 20px;
+    border: 1px solid #transparent;
+	transition: 0.6s ease;
+}
+
+@media screen and (max-width: 540px){
+    ul li a {
+		border: 1px solid #fff;
+    }
+}
+
+ul li a:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+ul li.active a{
+	background-color: #fff;
+	color: #000;
+}
+
+#title {
+  background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("images/shrine.jpg");
+  z-index:2;
+}
+
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.gradient {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.7));
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 0;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #myVideo {
+        width:100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    #myVideo { 
+        width:auto;
+        height: 100%;
+    }
+}
+
+#title h1 {
+ transform: scale(.75);
+ transform-origin: 50% 100%;
+ position: absolute;
+ top: 20%;
+ left: 0;
+ right: 0;
+}
+
+#slide1:before {
+  background-image: url("images/mountain.jpg");
+  transform: translateZ(-1px) scale(2);
+}
+
+#slide2 {
+  background-image: url("images/shrine.jpg");
+  z-index:2;
+}
+
+#slide3:before {
+  background-image: url("images/city.jpg");
+  transform: translateZ(-1px) scale(2);
+}
+
+#slide4 {
+  background-image: url("images/sushi.jpg");
+  z-index:2;
+}
+
+#slide5 {
+  background: #222;
+}
+
+#slide5 h1 {
+  top: 1%;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+#slide5 p {
+  color: #fff;
+}
