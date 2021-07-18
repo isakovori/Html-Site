@@ -166,7 +166,7 @@ ul li.active a{
 }
 
 #title {
-  background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("images/shrine.jpg");
+  background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("images/video.jpg");
   z-index:2;
 }
 
